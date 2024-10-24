@@ -1,0 +1,28 @@
+{
+	"Routes": [
+		{
+			"DownstreamPathTemplate": "/api/StudentAttendance",
+			"DownstreamScheme": "https",
+			"DownstreamHostAndPorts": [
+				{
+					"Host": "localhost",
+					"Port": 7024
+				}
+			],
+			"UpstreamPathTemplate": "/ApiGatewayOcelot/Attendance",
+			"UpstreamHttpMethod": [ "Get", "Post" ]
+		},
+		{
+			"DownstreamPathTemplate": "/api/StudentAdmission",
+			"DownstreamScheme": "https",
+			"DownstreamHostAndPorts": [
+				{
+					"Host": "localhost",
+					"Port": 7209
+				}
+			],
+			"UpstreamPathTemplate": "/ApiGatewayOcelot/Admission",
+			"UpstreamHttpMethod": [ "Get", "Post" ]
+		}
+	]
+}
